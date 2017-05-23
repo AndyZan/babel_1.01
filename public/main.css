@@ -1,0 +1,147 @@
+/* Убираем рамки, делаем страницу 100% высоты, иначе не получится выравнять элементы по центру по ветикали */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Задаем базовый цвет текста и фона, а так же шрифт */
+body {
+  color: #333;
+  font: 14px/1.5 "Georgia", "Times New Roman", serif;
+  background: white;
+}
+
+/* Теперь говорим, что #root будет тоже 100% и включаем флексбокс. коотырй позволит выравнять все что в него вложено по центру
+как по вертикали, так и по горизонтали. Хороший мануал по флексбоксу: http://frontender.info/a-guide-to-flexbox/ */
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Задаем отступ, чтобы текст не прилипал к краям браузера и равняем текст по цетру */
+.aphorism_container {
+  font-size: 0;
+  margin: 50px;
+  text-align: center;
+}
+
+/* Меняем размер текста и задаем отступ снизу, чтобы кнопка не прилипала */
+.aphorism_text {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+/* Меняем внешний вид кнопки */
+.aphorism_button {
+  margin-top: 5px;
+  font-size: 25px;
+  border: 3px solid #eee;
+  border-radius: 5px;
+  padding: 13px 60px;
+  background: transparent;
+  color: #666;
+  font: 25px/1 "Georgia", "Times New Roman", serif;
+  cursor: pointer; /* Делаем чтобы при наведении на кнопку курсор становился пальцем */
+  transition: border-color 300ms; /* Задаем время анимациии, чтобы при наведении и нажатии вид кнопки менялся плавно, см. ниже */
+}
+
+.aphorism_button:focus {
+  outline: none; /* Отключаем дефолтную рамочку вокруг кнопки при ее выделении */
+}
+
+.aphorism_button:hover {
+  border-color: #ccccff; /* Делаем голубоватую рамку вокруг кнопки при наведении. За счет transition (см. выше) цвет будет меняьтся плавно */
+}
+
+.aphorism_button:active {
+  border-color: #ffcccc; /* Делаем красноватую рамку вокруг кнопки при наведении. За счет transition (см. выше) цвет будет меняьтся плавно */
+}
+.aphorism_input {
+  margin-top: 5px;
+  border: 3px solid #eee;
+  border-radius: 5px;
+  padding: 14px 10px;
+  font-size: 20px;
+  /*height: 24px;*/
+}
+.aphorism_textarea{
+  border: 3px solid #eee;
+  border-radius: 5px;
+  padding: 70px 200px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.edit_area_button{
+  margin-top: 5px;
+  font-size: 25px;
+  border: 3px solid #eee;
+  border-radius: 5px;
+  padding: 13px 30px;
+  background: transparent;
+  color: #666;
+  font: 25px/1 "Georgia", "Times New Roman", serif;
+  cursor: pointer; /* Делаем чтобы при наведении на кнопку курсор становился пальцем */
+  transition: border-color 300ms; /* Задаем время анимациии, чтобы при наведении и нажатии вид кнопки менялся плавно, см. ниже */
+}
+
+.edit_area_button:hover {
+  border-color: #ccccff; /* Делаем голубоватую рамку вокруг кнопки при наведении. За счет transition (см. выше) цвет будет меняьтся плавно */
+}
+
+.edit_area_button:active {
+  border-color: #ffcccc; /* Делаем красноватую рамку вокруг кнопки при наведении. За счет transition (см. выше) цвет будет меняьтся плавно */
+}
+
+.add_area_button{
+  margin-top: 5px;
+  font-size: 25px;
+  border: 3px solid #eee;
+  border-radius: 5px;
+  padding: 13px 15px;
+  background: transparent;
+  color: #666;
+  font: 25px/1 "Georgia", "Times New Roman", serif;
+  cursor: pointer; /* Делаем чтобы при наведении на кнопку курсор становился пальцем */
+  transition: border-color 300ms; /* Задаем время анимациии, чтобы при наведении и нажатии вид кнопки менялся плавно, см. ниже */
+}
+
+.add_area_button:hover {
+  border-color: #ccccff; /* Делаем голубоватую рамку вокруг кнопки при наведении. За счет transition (см. выше) цвет будет меняьтся плавно */
+}
+
+.add_area_button:active {
+  border-color: #ffcccc; /* Делаем красноватую рамку вокруг кнопки при наведении. За счет transition (см. выше) цвет будет меняьтся плавно */
+}
+
+.del_area_button{
+  margin-top: 5px;
+  font-size: 25px;
+  border: 3px solid #eee;
+  border-radius: 5px;
+  padding: 13px 17px;
+  background: transparent;
+  color: #666;
+  font: 25px/1 "Georgia", "Times New Roman", serif;
+  cursor: pointer; /* Делаем чтобы при наведении на кнопку курсор становился пальцем */
+  transition: border-color 300ms; /* Задаем время анимациии, чтобы при наведении и нажатии вид кнопки менялся плавно, см. ниже */
+}
+
+.del_area_button:hover {
+  border-color: #ccccff; /* Делаем голубоватую рамку вокруг кнопки при наведении. За счет transition (см. выше) цвет будет меняьтся плавно */
+}
+
+.del_area_button:active {
+  border-color: #ffcccc; /* Делаем красноватую рамку вокруг кнопки при наведении. За счет transition (см. выше) цвет будет меняьтся плавно */
+}
+
+.title_edit_mode{
+  font-size: 25px;
+}
+
+.aphorism_loading{
+  position: absolute; width: 100%; height: 100%; background: url('http://loading.io/loader/?use=eyJzaXplIjo2MCwic3BlZWQiOjEsImNiayI6IiNmZmZmZmYiLCJjMSI6IiMwMDAiLCJjMiI6IjYiLCJjMyI6IjUiLCJjNCI6ImFsbCIsInR5cGUiOiJzcGluIn0=) no-repeat center center')
+}
