@@ -87,6 +87,30 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.open('GET', '/load-grid', false);
         xhr.send();
         console.log(xhr.responseText);
+        React.createElement(
+          "table",
+          { className: "aphorism_grid", id: "root" },
+          React.createElement(
+            "thead",
+            null,
+            React.createElement(
+              "td",
+              null,
+              "Id"
+            ),
+            React.createElement(
+              "td",
+              null,
+              "Aphorism"
+            ),
+            React.createElement(
+              "td",
+              null,
+              "Author"
+            )
+          ),
+          React.createElement("tbody", null)
+        );
       }
     }, {
       key: "addAphorism",

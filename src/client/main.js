@@ -60,6 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.open('GET', '/load-grid', false);
         xhr.send();
         console.log(xhr.responseText);
+        <table className="aphorism_grid" id="root">
+            <thead>
+                <td>Id</td>
+                <td>Aphorism</td>
+                <td>Author</td>
+            </thead>
+            <tbody></tbody>
+        </table>
     }
 
     addAphorism() {
