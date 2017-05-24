@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var response = xhr.responseText;
 
-        function myFunction(response) {
+        function loadGrid(response) {
             var table = document.getElementById('aphorismInput').getElementsByTagName('tbody')[0];
 
             response.forEach(function(stringData, index, array){
