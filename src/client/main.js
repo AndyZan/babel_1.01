@@ -60,7 +60,23 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.open('GET', '/load-grid', false);
         xhr.send();
         console.log(xhr.responseText);
-        <table className="aphorism_grid" id="root">
+
+        var response = xhr.responseText;
+
+        function myFunction(response) {
+            var table = document.getElementById('aphorismInput').getElementsByTagName('tbody')[0];
+
+            response.forEach(function(stringData, index, array){
+                var row = table.insertRow(index);
+                var elements = stringData.split(' ');
+                for (var i = 0; i < elements.length; ++i) {
+                    var cell = row.insertCell(i);
+                    cell.innerHTML = elements[i];
+                }
+            });
+        }
+
+        <table className="aphorism_grid">
             <thead>
                 <td>Id</td>
                 <td>Aphorism</td>
